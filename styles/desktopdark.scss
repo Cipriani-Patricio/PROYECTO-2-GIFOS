@@ -82,7 +82,21 @@
                    width: auto;
                    height: 100%;
                    margin-left: 50px;
-              a{ 
+
+                   button{
+                    width: 100%;
+                    text-decoration: none;
+                    font-family: $letra-principal;
+                    font-size: 13px;
+                    color: #FFFFFF;
+                    text-align: center;
+                    line-height: 60px;
+                    border:none;
+                    cursor: pointer;
+
+                    }
+
+              a{  width: 100%;
                   text-decoration: none;
                   font-family: $letra-principal;
                   color: $color-principal;

@@ -1,3 +1,7 @@
+
+// BURGER MENU-------------------------------
+
+
 var burger= document.getElementById ('burger');
 var x= document.getElementById ('x');
 var desplegable= document.getElementById ('desplegable');
@@ -14,3 +18,23 @@ x.addEventListener('click', () => {
     desplegable.style.display='none';
 } );
 
+//  BURGER MENU  END-------------------------------
+
+
+// CHANGE MODE-------------------------------
+
+var nocturno= document.getElementById ('nocbtn');
+var diurno= document.getElementById ('diurbtn');
+
+
+nocturno.addEventListener('click', () => {
+    var linkStyle= document.getElementById ('theme').href= "styles/styledark.css";
+
+} );
+
+diurno.addEventListener('click', () => {
+    var linkStyle= document.getElementById ('theme').href= "styles/style.css";
+
+} );
+
+// CHANGE MODE END-------------------------------

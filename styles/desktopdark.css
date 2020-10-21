@@ -92,7 +92,19 @@
     height: 100%;
     margin-left: 50px;
   }
+  header .menu ul li button {
+    width: 100%;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 60px;
+    border: none;
+    cursor: pointer;
+  }
   header .menu ul li a {
+    width: 100%;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     color: #572EE5;

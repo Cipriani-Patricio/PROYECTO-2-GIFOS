@@ -41,6 +41,7 @@ body{
        margin-left: 5.86%;
        margin-bottom: 17.2px;
        margin-top: 34px;
+       cursor: pointer;
    }
    
        
@@ -54,6 +55,7 @@ body{
           width: 45px;
           height: 45px;
           margin-right: 15px;
+          cursor: pointer;
         
    
       }
@@ -92,7 +94,23 @@ body{
                    align-items: center;
                    width: 100%;
                    height: 60px;
-              a{ 
+
+                   button{
+                    width: 100%;
+                    text-decoration: none;
+                    font-family: $letra-principal;
+                    font-size: 15px;
+                    color: #FFFFFF;
+                    text-align: center;
+                    line-height: 60px;
+                    border:none;
+                    background: none;
+                    cursor: pointer;
+                    }
+
+                   
+
+              a{  width: 100%;
                   text-decoration: none;
                   font-family: $letra-principal;
                   font-size: 15px;

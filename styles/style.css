@@ -43,6 +43,7 @@ header .menu .contenedor1 img {
   margin-left: 5.86%;
   margin-bottom: 17.2px;
   margin-top: 34px;
+  cursor: pointer;
 }
 
 header .menu .contenedor1 .burger {
@@ -56,6 +57,7 @@ header .menu .contenedor1 .x {
   width: 45px;
   height: 45px;
   margin-right: 15px;
+  cursor: pointer;
 }
 
 header .menu ul {
@@ -110,7 +112,21 @@ header .menu ul li {
   height: 60px;
 }
 
+header .menu ul li button {
+  width: 100%;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 60px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 header .menu ul li a {
+  width: 100%;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
@@ -375,7 +391,19 @@ footer .derechos {
     height: 100%;
     margin-left: 50px;
   }
+  header .menu ul li button {
+    width: 100%;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 60px;
+    border: none;
+    cursor: pointer;
+  }
   header .menu ul li a {
+    width: 100%;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     color: #572EE5;
