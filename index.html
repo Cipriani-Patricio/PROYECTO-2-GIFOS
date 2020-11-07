@@ -10,6 +10,7 @@
 
     <link id="theme" rel="stylesheet" href="styles/style.css">
     <!-- <link rel="stylesheet" href="styles/desktop.css">  -->
+    
   
 
     <!-- LINK FONT AWESOME -->
@@ -40,20 +41,22 @@
                          <li  id="mododiur" class="primerli"><button id="diurbtn" href="">MODO DIURNO</button></li>
 
                          <div class="raya"></div>
-                         <li><a href="favoritos.html">FAVORITOS</a></li>
+                         <li><a class="options" href="favoritos.html">FAVORITOS</a></li>
                          <div class="raya"></div>
-                         <li><a href="mis_gifos.html">MIS GIFOS</a></li>
+                         <li><a class="options" href="mis_gifos.html">MIS GIFOS</a></li>
                          <div class="raya"></div>
   
                 </ul>
 
-                <a class="creargifo" href="crear_gifos.html"><img class="creargifo" src="images/button-crear-gifo.svg" alt="creargifo"></a>                
+                <a class="creargifo options" href="crear_gifos.html"><img class="creargifo" src="images/button-crear-gifo.svg" alt="creargifo"></a>                
         </nav> 
     </header>
 
+    <!----------------- INSPIRATE, BUSCA, GUARDA Y CREA LOS MEJORES GIFOS------------------------------------------->
+
     <section class="principal">
 
-        <div class="inspirate">
+        <div id='inspirate1' class="inspirate">
                 Inspírate, busca, <br> 
                 guarda y crea los <br> 
                 mejores <span> GIFOS</span>
@@ -63,11 +66,11 @@
             guarda y crea <br> 
             los mejores <span> GIFOS</span>
         </div>
-        <img src="images/ilustra_header.svg" alt="amigos">
+        <img id="amigos" src="images/ilustra_header.svg" alt="amigos">
 
-        <input type="text">
+        <input id='search' class="search" type="text">
 
-        <div class="trending">
+        <div id='trending1'class="trending">
             <span> Trending:</span> <br>
                 Reactions, Entertainment,<br>
                 Sports, Stickers, Artists
@@ -77,8 +80,20 @@
                 Reactions, Entertainment,
                 Sports, Stickers, Artists
         </div>
+       <div id='divtitulo'class="divtitulo">
+
+       </div>
+        <div id="cont-busqueda" class="cont-busqueda">
+
+        </div>
+        <div id="vermas" class="vermas">
+
+        </div>
 
     </section>
+    <!----------------- INSPIRATE, BUSCA, GUARDA Y CREA LOS MEJORES GIFOS------------------------------------------->
+
+    
 
     <section class="trending-gifos">
             <h1>Trending GIFOS</h1>
@@ -86,7 +101,7 @@
             GIFOS de nuestra comunidad.</h2>
             <h2 class="titulo2">Mira los últimos 
                 GIFOS de nuestra comunidad.</h2>
-            <div class="galeria">
+            <div id="galeria" class="galeria">
 
             </div>
     </section>
@@ -117,6 +132,9 @@
 
     <!-- --------------LINK A SCRIPT ----------------->
     <script src="menu.js"></script>
+    <script src="trending.js"></script>
+    <script src="search.js"></script>
+    
 
 
 </body>
