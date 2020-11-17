@@ -61,14 +61,25 @@
                 guarda y crea los <br> 
                 mejores <span> GIFOS</span>
         </div>
-        <div class="inspirate2">
+        <div id='inspirate2'class="inspirate2">
             Inspírate, busca, 
             guarda y crea <br> 
             los mejores <span> GIFOS</span>
         </div>
         <img id="amigos" src="images/ilustra_header.svg" alt="amigos">
 
-        <input id='search' class="search" type="text">
+
+        <!-- pongo el input y los iconos en el mismo div -->
+      <div class="divinput">
+          <img id="lupa" class="lupa" src="images/icon-search.svg" alt="search">
+        <img id="equis" class="equis" src="images/close.svg" alt="close">
+        <input id="search" class="search" type="text" placeholder="Busca GIFOS y más">
+        <div id="sugerencias" class="sugerencias">
+
+        </div>
+      </div>
+
+
 
         <div id='trending1'class="trending">
             <span> Trending:</span> <br>
@@ -83,9 +94,15 @@
        <div id='divtitulo'class="divtitulo">
 
        </div>
-        <div id="cont-busqueda" class="cont-busqueda">
-
+        <div id="cont-busqueda" class="cont-busqueda">`
+           
         </div>
+        <img id="imagensincontenido" src="images/icon-busqueda-sin-resultado.svg" alt="sincontenido">
+        <div id="textootrabusqueda" >
+            Intenta con otra búsqueda
+        </div>
+       
+
         <div id="vermas" class="vermas">
 
         </div>
@@ -94,6 +111,7 @@
     <!----------------- INSPIRATE, BUSCA, GUARDA Y CREA LOS MEJORES GIFOS------------------------------------------->
 
     
+    <!----------------- TRENDING------------------------------------------->
 
     <section class="trending-gifos">
             <h1>Trending GIFOS</h1>
@@ -101,9 +119,18 @@
             GIFOS de nuestra comunidad.</h2>
             <h2 class="titulo2">Mira los últimos 
                 GIFOS de nuestra comunidad.</h2>
+        <div class="contenedorgaleria">
+
+           <img id="flechaleft" class="flechaleft" src="images/button-slider-left.svg" alt="flechaleft">
+
             <div id="galeria" class="galeria">
 
             </div>
+            <img id="flecharight" class="flecharight" src="images/Button-Slider-right.svg" alt="flecharight">
+
+          
+        </div>
+        
     </section>
 
     <footer>

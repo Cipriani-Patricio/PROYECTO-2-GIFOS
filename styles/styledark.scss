@@ -147,12 +147,13 @@ body{
 // ----------------------- PRINCIPAL--------------------------------------------------------
  .principal{
      width: 100%;
-     height: 470px ;
+     height: auto;
      display: flex;
      flex-direction: column;
      align-items: center;
      margin-top: 102px;
 
+     
      .inspirate{
          margin-bottom:31px;
         font-family: $letra-principal;
@@ -174,15 +175,82 @@ body{
              display: none;
          }     
 
-    input {
-        width: 89.06%;
-        height: 50px;
-        background: #37383C ;
-        border: 1px solid #FFFFFF;
-        border-radius: 27px;
-        border-radius: 27px;
+   
+.divinput{ 
+    width: 89.06%;
+    .lupa{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        margin-left: 78%;
+        margin-top: 15px;
 
-         }   
+        }
+        .equis{
+            display: none;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            margin-left: 78%;
+            margin-top: 15px;
+        }
+        .equis:hover{
+            cursor: pointer;
+        }
+
+    input {
+        width: 100%;
+        height: 50px;
+        background: #FFFFFF;
+        border: 1px solid #572EE5;
+        border-radius: 27px;
+        border-radius: 27px;
+        outline: none;
+        
+         
+        
+         } 
+        input::placeholder{
+            font-family: $letra-principal;
+            font-size: 16px;
+            text-align: center;
+            
+        }
+        input[type="text"] {
+                text-align: center;
+                font-family: $letra-principal;
+                font-size: 16px;
+                color: #000000;
+                text-align: left;
+        }
+        .sugerencias{
+            width: auto;
+            height: auto;
+            border:  1px solid #572EE5; 
+            border-radius: 20px;
+            display: none;
+            background: #FFFFFF;
+         
+            .cadasugerencia{
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                font-family: $letra-principal;
+                color: #000000;
+                height: 40px;
+               
+                .lupita{
+                 
+                 width: 15.8px;
+                 height: 15.8px;
+                 margin-left: 15px;
+                 margin-right: 10px;
+                }
+ 
+            }
+        }
+         
+        }
          .trending {
              margin-top: 31px;
              margin-bottom: 45px;
@@ -204,6 +272,69 @@ body{
          .trending2{
              display: none;
          }
+
+         .divtitulo{
+            width: 100%;
+            height: 40px;
+            margin-top: 34px;
+            margin-bottom: 38px;
+
+            .titulobusqueda{
+               font-family: $letra-principal;
+               font-size: 25px;
+               color: #FFFFFF;
+               text-align: center;
+               line-height: 40px;
+            }
+        }
+        .cont-busqueda{
+            display: grid;
+            grid-template-columns:  156px 156px;
+           column-gap: 21px;
+           row-gap: 25px;
+          
+           .gifbuscado{
+               width: 156px;
+               height: 120px;
+           }
+         
+        }
+        .botonvermas{
+           width: 127px;
+           height: 50px;     
+           border: 1px solid #572EE5;
+           border-radius: 25px;
+           border-radius: 25px;
+           background: none;
+           font-family: $letra-principal;
+           font-size: 13px;
+           color: #572EE5;
+           letter-spacing: 0;
+           text-align: center;
+           font-weight: bold;
+          
+
+       }
+
+       #imagensincontenido{
+          width: 150px;
+          height: 150px;
+          margin-bottom: 29px;
+          display: none;
+       }
+       #textootrabusqueda{
+       font-family: $letra-principal;
+       font-weight: bold;
+       font-size: 22px;
+       color: #50E3C2;
+       text-align: center;
+       line-height: 25px;
+       margin-bottom: 149px;
+       display: none;
+       }
+
+
+
      }
 // -----------------------FIN PRINCIPAL--------------------------------------------------------
 // -----------------------PAGINA FAVORITOS y MaS GIFOS--------------------------------------------------------
@@ -391,12 +522,35 @@ margin-top: 200px;
          .titulo2{
              display: none;
          }
-         .galeria{
-             height: 187px;
-             width: 100%;
-             margin-bottom: 82px ;
-             border: $borde;
-         }
+         
+         .contenedorgaleria{ 
+            display: flex;
+            width: 100%;
+            .flecharight{
+              display: none;
+            }
+            .flechaleft{
+              display: none;
+            }
+            .galeria{
+                height: 187px;
+                width: 100%;
+                margin-bottom: 82px ;
+                display: flex;
+                overflow-x: scroll;
+   
+             
+                   
+               .gifstyle{
+                   height: 187px;
+                   margin-left: 22px;
+   
+               }
+   
+            }
+       
+      
+        }
      }
 // -----------------------FIN TRENDING GIFOS--------------------------------------------------------
 

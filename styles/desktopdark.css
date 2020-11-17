@@ -156,14 +156,6 @@
     width: 399px;
     height: 190px;
   }
-  .principal input {
-    width: 551px;
-    height: 50px;
-    background: #FFFFFF;
-    border: 1px solid #572EE5;
-    border-radius: 27px;
-    border-radius: 27px;
-  }
   .principal .trending {
     display: none;
   }
@@ -184,6 +176,72 @@
     color: #FFFFFF;
     text-align: center;
     line-height: 25px;
+  }
+  .principal .divinput {
+    width: 551px;
+  }
+  .principal .divinput .lupa {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 490px;
+    margin-top: 15px;
+  }
+  .principal .divinput .equis {
+    display: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 490px;
+    margin-top: 15px;
+  }
+  .principal .divinput input {
+    width: 551px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #572EE5;
+    border-radius: 27px;
+    border-radius: 27px;
+  }
+  .principal .divinput input::-webkit-input-placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  .principal .divinput input:-ms-input-placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  .principal .divinput input::-ms-input-placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  .principal .divinput input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  .principal .divinput input[type="text"] {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+  }
+  .principal .cont-busqueda {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 260px 260px 260px 260px;
+        grid-template-columns: 260px 260px 260px 260px;
+    -webkit-column-gap: 28px;
+            column-gap: 28px;
+    row-gap: 28px;
+  }
+  .principal .cont-busqueda .gifbuscado {
+    width: 260px;
+    height: 200px;
   }
   .favoritos .contenidofav {
     height: 668px;
@@ -228,11 +286,39 @@
   .trending-gifos .titulo1 {
     display: none;
   }
-  .trending-gifos .galeria {
-    height: 275px;
+  .trending-gifos .contenedorgaleria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     margin-bottom: 182px;
-    border: 1px solid black;
+  }
+  .trending-gifos .contenedorgaleria .flecharight {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 6.52%;
+    margin-left: 22px;
+  }
+  .trending-gifos .contenedorgaleria .flechaleft {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: 6.52%;
+    margin-right: 22px;
+  }
+  .trending-gifos .contenedorgaleria .galeria {
+    height: 275px;
+    width: 78.26%;
+    margin-bottom: 0px;
+    overflow-x: hidden;
+  }
+  .trending-gifos .contenedorgaleria .galeria .gifstyle {
+    height: 275px;
+    margin-left: 27px;
   }
   footer {
     display: -webkit-box;

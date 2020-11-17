@@ -151,15 +151,7 @@ margin-left: 10.83%;
             height: 190px;
         }       
 
-   input {
-       width: 551px;
-       height: 50px;
-       background: #FFFFFF;
-       border: 1px solid #572EE5;
-       border-radius: 27px;
-       border-radius: 27px;
-
-        }   
+ 
         .trending{
             display: none;
         }
@@ -182,7 +174,79 @@ margin-left: 10.83%;
            }
 
         }
+// --------------------input
+    .divinput{ 
+        width: 551px;
+        .lupa{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            margin-left: 490px;
+            margin-top: 15px;
+    
+            }
+            .equis{
+                display: none;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                margin-left: 490px;
+                margin-top: 15px;
+            }
+    
+            input {
+                width: 551px;
+                height: 50px;
+                background: #FFFFFF;
+                border: 1px solid #572EE5;
+                border-radius: 27px;
+                border-radius: 27px;
+         
+                 }   
+            input::placeholder{
+                font-family: $letra-principal;
+                font-size: 16px;
+                text-align: center;
+                
+            }
+            input[type="text"] {
+                    text-align: center;
+                    font-family: $letra-principal;
+                    font-size: 16px;
+                    color: #000000;
+                    text-align: left;
+            }
+           
+             
+            }
+
+// --------------------grillas
+.cont-busqueda{
+    display: grid;
+    grid-template-columns:  260px 260px 260px 260px;
+    
+   column-gap: 28px;
+   row-gap: 28px;
+  
+   .gifbuscado{
+       width: 260px;
+       height: 200px;
+   }
     }
+    
+
+    .divtitulo{
+      
+
+        .titulobusqueda{
+           
+           font-size: 35px;
+           
+        }
+    }
+   
+}
+
 // -----------------------FIN PRINCIPAL--------------------------------------------------------
 
 
@@ -241,13 +305,42 @@ border: $borde;
 
     }
 
+.contenedorgaleria{ 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 182px ;
+    .flecharight{
+        display: block;
+width: 40px;
+height: 40px;
+margin-right: 6.52%;
+margin-left: 22px;
+    }
+    .flechaleft{
+        display: block;
+       
+        width: 40px;
+        height: 40px;
+        margin-left: 6.52%;
+        margin-right: 22px;
+       
 
+    }
     .galeria{
         height: 275px;
-        width: 100%;
-        margin-bottom: 182px ;
-        border: $borde;
+        width: 78.26%;
+        margin-bottom: 0px;
+        overflow-x: hidden;
+        
+
+        .gifstyle{
+            height: 275px;
+            margin-left: 27px;
+
+        }
     }
+}
 }
 // -----------------------FIN TRENDING GIFOS--------------------------------------------------------
 
