@@ -1,6 +1,6 @@
 
 
-// -------------- INGRESAR GIFS EN GALERIA=------------------------------------------
+// -------------- INGRESAR GIFS y HOVER EN GALERIA------------------------------------------
 var contenedor= document.getElementById('galeria');
 const apiKey= 'qVaHwLcNfQCkaFG9NwjeZcEtilqJDo2x';
 
@@ -18,35 +18,30 @@ async function trendingGifos() {
             var  divgif= document.createElement('div');
             divgif.className='cont-gifstyle';
             
-var  gifcontent='<img id="gifstyle" class="gifstyle" src="'+ url.data[i].images.original.url+'"> ';
+            
+            
+var  gifcontent='<img id="gifstyle" class="gifstyle" src="'
+                  + url.data[i].images.original.url+
+                  '"><div id=" hoverdeimagen" class="hovergifs hover"> <div class=" divicons"> <img id="iconfav" class="icon" src="images/icon-fav.svg">'+
+                  '<img id="icondownload" class=" icon" src="images/icon-download.svg"><img id="iconmax" class="icon" src="images/icon-max-normal.svg">'
+                  +'</div> <div class="hovergifs titulogif">'+url.data[i].username +' <br>'+url.data[i].title +' </div></div>';
               
               divgif.innerHTML= gifcontent;
               
               contenedor.appendChild(divgif);
 
 
-// --------------GIFS HOVER-------------------------------------
+              
 
-// gifgaleria[i].addEventListener('click',  () => {
-//   var  hovertransparente= document.createElement('div');
-//  hovertransparente.className ='hovertransparente';
-//  contenedor.appendChild(hovertransparente);
-//  console.log(hovertransparente)
 
-  
-// } );
 
-// gifgaleria[i].addEventListener('mouseleave',  () => {
-//   gifgaleria[i].style.border= '0px';
-// } );
-// --------------GIFS HOVER------------------------------------------
-     }
+                                             }
 }
  
 trendingGifos()
 
 
-// -------------- BOTONES HOVER Y MODOS ------------------------------------------
+// -------------- BOTONES carrousel HOVER Y MODOS ------------------------------------------
 
 
 var flechaleft= document.getElementById('flechaleft');
@@ -63,7 +58,7 @@ flechaleft.addEventListener('mouseleave',  () => {
   flechaleft.setAttribute("src", "images/button-slider-left.svg");
   
   if(localStorage.modo=== "nocturno"){
-    flecharight.setAttribute("src", "images/button-slider-left-md-noct.svg");
+    flechaleft.setAttribute("src", "images/button-slider-left-md-noct.svg");
   
     }
 
@@ -103,5 +98,5 @@ flecharight.addEventListener('click',  () => {
 
 
 
-
+// --------------ICONOS FUNCIONALIDAD ------------------------------------------
 

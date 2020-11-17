@@ -582,9 +582,60 @@ header .menu .creargifo {
   overflow-x: scroll;
 }
 
-.trending-gifos .contenedorgaleria .galeria .gifstyle {
-  height: 187px;
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle {
+  position: relative;
   margin-left: 22px;
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle .gifstyle {
+  height: 187px;
+  width: auto;
+}
+
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: #572EE5;
+}
+
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons {
+  margin-left: 30%;
+  margin-top: 5px;
+}
+
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .icon {
+  margin-left: 7px;
+}
+
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons #iconfav:hover {
+  content: url(images/icon-fav-hover.svg);
+}
+
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons #icondownload:hover {
+  content: url(images/icon-download-hover.svg);
+}
+
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons #iconmax:hover {
+  content: url(images/icon-max-hover.svg);
+}
+
+.trending-gifos .contenedorgaleria .galeria .hover:hover {
+  opacity: 0.7;
+}
+
+.trending-gifos .contenedorgaleria .galeria .titulogif {
+  font-size: 16px;
+  margin-top: 75px;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  margin-left: 7px;
 }
 
 footer {
@@ -947,10 +998,46 @@ footer .derechos {
     width: 78.26%;
     margin-bottom: 0px;
     overflow-x: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .trending-gifos .contenedorgaleria .galeria .gifstyle {
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle {
+    position: relative;
+    margin-left: 22px;
+    width: auto;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .gifstyle {
     height: 275px;
-    margin-left: 27px;
+    width: auto;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #572EE5;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons {
+    margin-left: 53%;
+    margin-top: 5px;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .icon {
+    margin-left: 7px;
+  }
+  .trending-gifos .contenedorgaleria .galeria .hover:hover {
+    opacity: 0.7;
+  }
+  .trending-gifos .contenedorgaleria .galeria .titulogif {
+    font-size: 18px;
+    margin-top: 128px;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    margin-left: 7px;
   }
   footer {
     display: -webkit-box;
