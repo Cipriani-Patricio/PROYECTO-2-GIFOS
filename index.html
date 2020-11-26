@@ -9,6 +9,8 @@
     <!-- <link rel="stylesheet" href="styles/desktopdark.css"> -->
 
     <link id="theme" rel="stylesheet" href="styles/style.css">
+    <link id="thememax" rel="stylesheet" href="">
+
     <!-- <link rel="stylesheet" href="styles/desktop.css">  -->
     
   
@@ -22,8 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <header>
+    <!-- menu principal -->
+    <header id="menuprincipal">
            
         <nav class="menu">   
 
@@ -51,10 +53,11 @@
                 <a class="creargifo options" href="crear_gifos.html"><img class="creargifo" src="images/button-crear-gifo.svg" alt="creargifo"></a>                
         </nav> 
     </header>
+    <!-- menu principal -->
 
     <!----------------- INSPIRATE, BUSCA, GUARDA Y CREA LOS MEJORES GIFOS------------------------------------------->
 
-    <section class="principal">
+    <section id="principal" class="principal">
 
         <div id='inspirate1' class="inspirate">
                 Inspírate, busca, <br> 
@@ -113,7 +116,7 @@
     
     <!----------------- TRENDING------------------------------------------->
 
-    <section class="trending-gifos">
+    <section id="trendiggifos" class="trending-gifos">
             <h1>Trending GIFOS</h1>
             <h2 class="titulo1">Mira los últimos <br>
             GIFOS de nuestra comunidad.</h2>
@@ -133,7 +136,31 @@
         
     </section>
 
-    <footer>
+    <!-- TRENDING MAX============================================= -->
+    <section id="trendiggifosmax" class="trending-gifos-max">
+        
+      <img id="xdemax" class="xdemax" src="images/close.svg" alt="xdemax">
+
+        <div class="contenedorgaleriamax">
+    
+           
+            <div id="galeriamax" class="galeriamax">
+    
+            </div>
+           
+    
+          
+        </div>
+        
+    </section>
+    
+
+
+
+    <!-- TRENDING MAX============================================= -->
+
+
+    <footer id="pie">
 
 
             <div class="compartiren">
@@ -158,9 +185,11 @@
 
 
     <!-- --------------LINK A SCRIPT ----------------->
+    <script src="https://www.WebRTC-experiment.com/RecordRTC.js"></script>
     <script src="menu.js"></script>
     <script src="trending.js"></script>
     <script src="search.js"></script>
+    
     
 
 

@@ -1,0 +1,262 @@
+@import "coloresyletras";
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+
+}
+body{
+    position: fixed;
+    height: 100%;
+}
+
+    
+.trending-gifos-max{
+    
+    width: 100%;
+    position: absolute;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F3F5F8;
+    height: 100%;
+    
+    
+.xdemax{
+    margin-left: 60%;
+    width: 20px;
+    margin-bottom: 30px;
+}
+.xdemax:hover{
+    cursor: pointer;
+}
+.contenedorgaleriamax{ 
+    display: flex;
+    height: auto;
+    align-items: center;
+   justify-content: center;
+    width: auto;
+    
+   
+ 
+    
+//    -------------------------galeria gifs y hover------------------------------
+.galeriamax{
+height: auto;
+width: 800px;
+
+overflow-x: hidden;
+display: flex;
+overflow-y: hidden;
+justify-content: center;
+
+        
+           
+                        
+    .cont-gifstyle-max{
+               
+                
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+        
+                        .gifstyle-max{
+                            
+                            height: 400px;
+                            width: auto;
+                                 }
+                        .informacion{
+                            display: flex;
+                            width: 100%;
+                            height: auto;
+                            justify-content: space-between;
+                           
+                            
+                            
+                                 .diviconsmax  {
+                                        margin-right: 10px;
+                                        margin-top: 10px;
+                                        display: flex;
+                                        .iconmax{
+                                            margin-left: 7px;
+                                        }
+                                        .iconfav:hover{
+                                            content: url(images/icon-fav-hover.svg);
+                                            cursor: pointer;
+                                        }
+                                        .icondownload:hover{
+                                            content: url(images/icon-download-hover.svg);
+                                        }
+                                        .iconmax:hover{
+                                            content: url(images/icon-max-hover.svg);
+                                        }
+                                    }
+                                            
+                        
+
+                             }
+                        
+                    }
+                             
+        .titulogifmax{
+            width: auto;
+                font-size: 16px;
+                font-weight: bold;
+                font-family: $letra-3;
+                color:black;
+                margin: 10px 0px 0px 0px;
+                  }
+         
+        }
+
+       
+//    -------------------------galeria gifs y hover------------------------------
+    
+}//<-------------------cierre contenedor galeria
+}//<-------------------cierre trending gifos
+
+
+@media only screen and (max-width:700px) {
+
+    .trending-gifos-max{
+    
+        width: 100%;
+        position: absolute;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #F3F5F8;
+        height: 100%;
+        
+        
+    .xdemax{
+        margin-left: 60%;
+        width: 20px;
+        margin-bottom: 30px;
+    }
+    .xdemax:hover{
+        cursor: pointer;
+    }
+    .contenedorgaleriamax{ 
+        display: flex;
+        height: auto;
+        align-items: center;
+       justify-content: center;
+        width: auto;
+        
+       
+        .flecharightmax{
+            display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 6.52%;
+    margin-left: 22px;
+        }
+        .flecharightmax:hover{
+            content: url(images/Button-Slider-right-hover.svg);
+        }
+        .flechaleftmax{
+            display: block;
+           
+            width: 40px;
+            height: 40px;
+            margin-left: 6.52%;
+            margin-right: 22px;
+           
+    
+        }
+        .flechaleftmax:hover{
+            content: url(images/button-slider-left-hover.svg);
+    
+        }
+    //    -------------------------galeria gifs y hover------------------------------
+    .galeriamax{
+    height: auto;
+    width: 800px;
+    
+    overflow-x: hidden;
+    display: flex;
+    overflow-y: hidden;
+    justify-content: center;
+    
+            
+               
+                            
+        .cont-gifstyle-max{
+                   
+                    
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+            
+                            .gifstyle-max{
+                                align-self: center;
+                                height: 200px;
+                                width: 300px;
+                                     }
+                            .informacion{
+                                display: flex;
+                                width: 300px;
+                                height: auto;
+                                justify-content: space-between;
+                               
+                                
+                                
+                                     .diviconsmax  {
+                                            margin-right: 10px;
+                                            margin-top: 10px;
+                                            display: flex;
+                                            .iconmax{
+                                                margin-left: 7px;
+                                            }
+                                            .iconfav:hover{
+                                                content: url(images/icon-fav-hover.svg);
+                                                cursor: pointer;
+                                            }
+                                            .icondownload:hover{
+                                                content: url(images/icon-download-hover.svg);
+                                                cursor: pointer;
+                                            }
+                                            .iconmax:hover{
+                                                content: url(images/icon-max-hover.svg);
+                                                cursor: pointer;
+                                            }
+                                        }
+                                                
+                            
+    
+                                 }
+                            
+                        }
+                                 
+            .titulogifmax{
+                width: auto;
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-family: $letra-3;
+                    color:black;
+                    margin: 10px 0px 0px 0px;
+                      }
+             
+            }
+    
+           
+    //    -------------------------galeria gifs y hover------------------------------
+        
+    }//<-------------------cierre contenedor galeria
+    }//<-------------------cierre trending gifos
+
+
+
+
+
+}
+

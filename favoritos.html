@@ -9,7 +9,8 @@
     <!-- <link rel="stylesheet" href="styles/desktopdark.css"> -->
 
     <link id="theme" rel="stylesheet" href="styles/style.css">
-    <!-- <link rel="stylesheet" href="styles/desktop.css">  -->
+    <link id="thememax" rel="stylesheet" href="">
+
   
 
     <!-- LINK FONT AWESOME -->
@@ -22,13 +23,15 @@
 </head>
 <body>
     
-    <header>
+      <!-- menu principal -->
+      <header id="menuprincipal">
            
         <nav class="menu">   
 
                 <div class="contenedor1">
-                    <a href="index.html"><img class="logo" src="images/logo-mobile.svg" alt="logo-movile"></a>
-                    <img class="burger" id='burger' src="images/burger.svg" alt="burguer">
+                         <a href="index.html"><img class="logo" src="images/logo-mobile.svg" alt="logo-movile"></a>
+
+                         <img class="burger" id='burger' src="images/burger.svg" alt="burguer">
 
                          <img class="x" id='x' src="images/Button-close-hover-modo-noc.svg" alt="x">
                 </div>
@@ -39,7 +42,7 @@
                          <li  id="mododiur" class="primerli"><button id="diurbtn" href="">MODO DIURNO</button></li>
 
                          <div class="raya"></div>
-                         <li><a id="options" href="favoritos.html">FAVORITOS</a></li>
+                         <li><a class="options" href="favoritos.html"> <span class="gris"> FAVORITOS </span> </a></li>
                          <div class="raya"></div>
                          <li><a class="options" href="mis_gifos.html">MIS GIFOS</a></li>
                          <div class="raya"></div>
@@ -49,8 +52,11 @@
                 <a class="creargifo options" href="crear_gifos.html"><img class="creargifo" src="images/button-crear-gifo.svg" alt="creargifo"></a>                
         </nav> 
     </header>
+    <!-- menu principal -->
 
-    <section class="favoritos">  
+<!---------------------------------------- favoritos -->
+
+    <section id="principal" class="favoritos">  
 
 
        <img class="corazonfav" src="images/icon-favoritos.svg" alt="">
@@ -63,43 +69,87 @@
       <button class="vermas">VER MÁS</button>
     </section>
 
-    <section class="trending-gifos">
-            <h1>Trending GIFOS</h1>
-            <h2 class="titulo1">Mira los últimos <br>
+    
+    
+<!---------------------------------------- favoritos -->
+
+
+    <!----------------- TRENDING------------------------------------------->
+
+    <section id="trendiggifos" class="trending-gifos">
+        <h1>Trending GIFOS</h1>
+        <h2 class="titulo1">Mira los últimos <br>
+        GIFOS de nuestra comunidad.</h2>
+        <h2 class="titulo2">Mira los últimos 
             GIFOS de nuestra comunidad.</h2>
-            <h2 class="titulo2">Mira los últimos 
-                GIFOS de nuestra comunidad.</h2>
-            <div class="galeria">
+    <div class="contenedorgaleria">
 
-            </div>
-    </section>
+       <img id="flechaleft" class="flechaleft" src="images/button-slider-left.svg" alt="flechaleft">
 
-    <footer>
+        <div id="galeria" class="galeria">
+
+        </div>
+        <img id="flecharight" class="flecharight" src="images/Button-Slider-right.svg" alt="flecharight">
+
+      
+    </div>
+    
+</section>
+
+<!-- TRENDING MAX============================================= -->
+<section id="trendiggifosmax" class="trending-gifos-max">
+    
+  <img id="xdemax" class="xdemax" src="images/close.svg" alt="xdemax">
+
+    <div class="contenedorgaleriamax">
+
+       
+        <div id="galeriamax" class="galeriamax">
+
+        </div>
+       
+
+      
+    </div>
+    
+</section>
 
 
-            <div class="compartiren">
-                Compartir en:
-            </div>
-            <div class="iconosredes">
-            
-            <a href="https://www.facebook.com/">  <i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/?lang=es">  <i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/?hl=es-la">   <i class="fab fa-instagram"></i></a>
-            </div>
 
+
+<!-- TRENDING MAX============================================= -->
+
+
+<footer id="pie">
+
+
+        <div class="compartiren">
+            Compartir en:
+        </div>
+        <div class="iconosredes">
         
+        <a href="https://www.facebook.com/">  <i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/?lang=es">  <i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/?hl=es-la">   <i class="fab fa-instagram"></i></a>
+        </div>
+
+    
 
 
-            <div class="derechos">
-                © GIFOS 2020 All Rights Reserved.
-            </div>
+        <div class="derechos">
+            © GIFOS 2020 All Rights Reserved.
+        </div>
 
-    </footer>
+</footer>
 
+    
 
 
     <!-- --------------LINK A SCRIPT ----------------->
+    <script src="https://www.WebRTC-experiment.com/RecordRTC.js"></script>
     <script src="menu.js"></script>
+    <script src="trending.js"></script>
+    
 
 
 </body>
