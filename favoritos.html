@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="agregarfav()">
     
       <!-- menu principal -->
       <header id="menuprincipal">
@@ -63,10 +63,17 @@
 
        <h1 class="titulofav">Favoritos</h1>
 
-       <div class="contenidofav">
+       <img id="favsincontenido"src="images/icon-fav-sin-contenido.svg" class="imagen-fav-sin-contenido" alt="sin-contenido">
         
+       <div id="textofavsincontenido" class="texto-sin-contenido">
+           "¡Guarda tu primer GIFO en Favorios <br>
+               para que se muestre aquí!"
        </div>
-      <button class="vermas">VER MÁS</button>
+       <div id="contenedorfav" class="contenidofav">
+        
+
+       </div>
+      <button id="vermas" class="vermas">VER MÁS</button>
     </section>
 
     
@@ -148,7 +155,11 @@
     <!-- --------------LINK A SCRIPT ----------------->
     <script src="https://www.WebRTC-experiment.com/RecordRTC.js"></script>
     <script src="menu.js"></script>
+    <script src="favoritos.js"></script>
     <script src="trending.js"></script>
+    
+    
+    
     
 
 

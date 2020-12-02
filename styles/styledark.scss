@@ -228,12 +228,14 @@ body{
         }
         .sugerencias{
             width: auto;
-            height: auto;
+            max-height: 160px;
             border:  1px solid #572EE5; 
             border-radius: 20px;
             display: none;
             background: #FFFFFF;
-         
+           
+             overflow: hidden;
+             
             .cadasugerencia{
                 display: flex;
                 align-items: center;
@@ -291,17 +293,82 @@ body{
             }
         }
         .cont-busqueda{
+            height: auto;
             display: grid;
             grid-template-columns:  156px 156px;
            column-gap: 21px;
            row-gap: 25px;
-          
+           max-height: 845px;
+           overflow: hidden;
+           .contenedor-gif-hover{
+               position: relative;  
+               width: 156px;
+               height: 120px;
+               display: flex;
            .gifbuscado{
                width: 156px;
                height: 120px;
            }
-         
-        }
+                  
+          .hover{
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           opacity: 0;
+           background: #572EE5;
+                  
+           .divicons{
+               display: flex;
+              width: auto;
+               margin-left: 30%;
+               margin-top: 5px;
+               align-items: center
+                ;
+              
+               .icon{
+                   width: 20px;
+                   height: 20px;
+                   margin-left: 7px;
+                   cursor: pointer;
+       
+               }
+               .iconfavactive{
+                   cursor: pointer;
+                   width: 20px;
+                   height: 20px;
+                   background: #FFFFFF;
+                   opacity: 1;   
+                   display: none;
+               }
+       
+               .iconfav:hover{
+                   content: url(images/icon-fav-hover.svg);
+                   cursor: pointer;
+               }
+               .icondownload:hover{
+                   content: url(images/icon-download-hover.svg);
+                   cursor: pointer;
+       
+               }
+               .iconmax:hover{
+                   content: url(images/icon-max-hover.svg);
+                   cursor: pointer;
+               }
+           }
+          }
+       }
+       
+       .hover:hover{
+           opacity: 0.7;
+       }
+       .titulogif{
+       font-size: 12px;
+       margin-top: 20px;
+       font-family: $letra-3;
+       color: #FFFFFF;
+       margin-left: 7px;
+       }
+            }
         .botonvermas{
            width: 127px;
            height: 50px;     
@@ -318,6 +385,11 @@ body{
           
 
        }
+       .vermassiguientes{
+        display: none;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
 
        #imagensincontenido{
           width: 150px;
@@ -360,16 +432,119 @@ body{
      .titulofav {
 font-family: $letra-principal;
 font-size: 20px;
-color:#FFFFFF;
+color: #FFFFFF;
 text-align: center;
 line-height: 30px;
 margin-bottom: 46px;
      }
-     .contenidofav{
-height: 819px;
-width: 100%;
-border: $borde;
 
+     .imagen-fav-sin-contenido{
+        height: 120px;
+        width: 120px;
+        margin-top:50px;
+        display: none;
+    }
+
+    .texto-sin-contenido{
+        font-family: $letra-principal;
+        font-size: 15px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 33px;
+        margin-top: 10px;
+        margin-bottom: 90px;
+        font-weight: bold;
+        display: none;
+    }
+
+     .contenidofav{
+        display: grid;
+             grid-template-columns:  156px 156px;
+            column-gap: 21px;
+            row-gap: 25px;
+
+            
+
+     .cont-gifstyle{
+        position: relative;
+         
+         width: 156px;
+         height: 120px;
+         display: flex;
+
+     
+       
+   .gifstylefav{
+        
+       height: 120px;
+       width: 156px;    
+   }
+   
+  
+   
+   .hover{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    opacity: 0;
+    background: #572EE5;
+    
+
+
+    
+
+    .divicons{
+        display: flex;
+       width: auto;
+        margin-left: 30%;
+        margin-top: 5px;
+        align-items: center
+         ;
+       
+        .icon{
+            width: 20px;
+            height: 20px;
+            margin-left: 7px;
+            cursor: pointer;
+
+        }
+        .iconfavactive{
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            background: #FFFFFF;
+            opacity: 1;
+           
+            
+        }
+
+        .iconfav:hover{
+            content: url(images/icon-fav-hover.svg);
+            cursor: pointer;
+        }
+        .icondownload:hover{
+            content: url(images/icon-download-hover.svg);
+            cursor: pointer;
+
+        }
+        .iconmax:hover{
+            content: url(images/icon-max-hover.svg);
+            cursor: pointer;
+        }
+    }
+   }
+}
+
+.hover:hover{
+    opacity: 0.7;
+}
+.titulogif{
+font-size: 12px;
+margin-top: 20px;
+font-family: $letra-3;
+color: #FFFFFF;
+margin-left: 7px;
+}
      }
      .vermas{
          background: none;
@@ -386,15 +561,15 @@ border: $borde;
         letter-spacing: 0;
         text-align: center;
          
-
+            display: none;
      }
-}
+
 
 .mis_gifos{
     width: 100%;
     height: 435px;
 }
-
+     }
 // -----------------------FIN PAGINA FAVORITOS y MaS GIFOS--------------------------------------------------------
 
 

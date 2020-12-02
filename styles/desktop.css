@@ -231,18 +231,157 @@
     -webkit-column-gap: 28px;
             column-gap: 28px;
     row-gap: 28px;
+    max-height: 684;
+    overflow: hidden;
   }
-  .principal .cont-busqueda .gifbuscado {
+  .principal .cont-busqueda .contenedor-gif-hover {
+    position: relative;
     width: 260px;
     height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .gifbuscado {
+    width: 260px;
+    height: 200px;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #572EE5;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    margin-left: 30%;
+    margin-top: 5px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 7px;
+    cursor: pointer;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconfavactive {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    opacity: 1;
+    display: none;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconfav:hover {
+    content: url(images/icon-fav-hover.svg);
+    cursor: pointer;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .icondownload:hover {
+    content: url(images/icon-download-hover.svg);
+    cursor: pointer;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconmax:hover {
+    content: url(images/icon-max-hover.svg);
+    cursor: pointer;
+  }
+  .principal .cont-busqueda .hover:hover {
+    opacity: 0.7;
+  }
+  .principal .cont-busqueda .titulogif {
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    margin-left: 7px;
   }
   .principal .divtitulo .titulobusqueda {
     font-size: 35px;
   }
+  .favoritos .imagen-fav-sin-contenido {
+    height: 150px;
+    width: 150px;
+    margin-top: 100px;
+  }
+  .favoritos .texto-sin-contenido {
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    color: #50E3C2;
+    text-align: center;
+    line-height: 33px;
+    margin-top: 20px;
+    margin-bottom: 130px;
+    font-weight: bold;
+  }
   .favoritos .contenidofav {
-    height: 668px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 260px 260px 260px 260px;
+        grid-template-columns: 260px 260px 260px 260px;
+    max-height: 656px;
+    overflow: hidden;
+    -webkit-column-gap: 28px;
+            column-gap: 28px;
+    row-gap: 28px;
+  }
+  .favoritos .contenidofav .cont-gifstyle {
+    position: relative;
+    width: 260px;
+    height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .favoritos .contenidofav .cont-gifstyle .gifstylefav {
+    width: 260px;
+    height: 200px;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover {
+    position: absolute;
     width: 100%;
-    border: 1px solid black;
+    height: 100%;
+    background: #572EE5;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    margin-left: 30%;
+    margin-top: 5px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 7px;
+    cursor: pointer;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconfavactive {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    opacity: 1;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconfav:hover {
+    content: url(images/icon-fav-hover.svg);
+    cursor: pointer;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .icondownload:hover {
+    content: url(images/icon-download-hover.svg);
+    cursor: pointer;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconmax:hover {
+    content: url(images/icon-max-hover.svg);
+    cursor: pointer;
   }
   .trending-gifos {
     width: 100%;

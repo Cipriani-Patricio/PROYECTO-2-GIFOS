@@ -1,14 +1,16 @@
 
+// --------------------------Variables---------------------------
+
 var contenedor= document.getElementById('galeria');
-
 const apiKey= 'qVaHwLcNfQCkaFG9NwjeZcEtilqJDo2x';
-
 var iconsdownload= [];
 var iconsmax= [];
 var gificonmax= [];
 var imagengif=[];
 var iconsfav=[];
 var iconsfavactive=[];
+
+// -------------------creacion de arrayfavoritos----------------------
 
 var stringlocalstorage= localStorage.getItem('favoritos');
 
@@ -21,32 +23,36 @@ if (stringlocalstorage == null || stringlocalstorage == "[]"){
 }
 console.log(arrayfavoritos)
 
+// -------------------creacion de arrayfavoritos----------------------
+
+
+// -------------------FUNCION QUE INSERTA TRENDINGS----------------------
 
 async function trendingGifos() { 
+
     var url_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=30&offset=0`; 
     let r= await fetch (url_trending);
     let url= await r.json();
    
-
-
-    var gifgaleria= document.getElementsByClassName('gifstyle');
-
+                                          //  for que recorre todos las 30 url obtenidas
      for ( let i=0; i<url.data.length; i++){
-                
-            var  divgif= document.createElement('div');
-            divgif.className='cont-gifstyle';
+
+                                                      // creo un elemento div que va a contener al gif y al hover         
+                 var  divgif= document.createElement('div');
+                               divgif.className='cont-gifstyle';
             
-            
-var  gifcontent='<img id="gifstyle" class="gifstyle" src="'
-                  + url.data[i].images.original.url+
-                  '"><div id="hoverdeimagen" class="hovergifs hover"> <div class=" divicons"> <img id="iconfavactive'+[i]+'" class="icon iconfavactive" src="images/icon-fav-active.svg"> <img id="iconfav'+[i]+'" class="icon iconfav" src="images/icon-fav.svg">'+
-                  '<img data-src="https://media0.giphy.com/media/'+url.data[i].id+'/giphy.gif" id="icondownload'+[i]+'" class="icon icondownload" src="images/icon-download.svg" alt="icondownload"><img id="iconmax'+[i]+'" class="icon iconmax" src="images/icon-max-normal.svg">'
-                  +'</div> <div class="hovergifs titulogif">'+url.data[i].username +' <br>'+url.data[i].title +' </div></div>';
-              
+                                                       // creo gif y hover
+                var  gifcontent='<img id="gifstyle" class="gifstyle" src="'
+                                  + url.data[i].images.original.url+
+                                  '"><div id="hoverdeimagen" class="hovergifs hover"> <div class=" divicons"> <img id="iconfavactive'+[i]+'" class="icon iconfavactive" src="images/icon-fav-active.svg"> <img id="iconfav'+[i]+'" class="icon iconfav" src="images/icon-fav.svg">'+
+                                  '<img data-src="https://media0.giphy.com/media/'+url.data[i].id+'/giphy.gif" id="icondownload'+[i]+'" class="icon icondownload" src="images/icon-download.svg" alt="icondownload"><img id="iconmax'+[i]+'" class="icon iconmax" src="images/icon-max-normal.svg">'
+                                  +'</div> <div class="hovergifs titulogif">'+url.data[i].username +' <br>'+url.data[i].title +' </div></div>';
+                              
               divgif.innerHTML= gifcontent;
               
-              contenedor.appendChild(divgif);
+              contenedor.appendChild(divgif); //creo dentro del contenedor del html los gifs
 
+              // creo una variable para cada icono
           var download=  document.getElementById('icondownload'+[i]); 
           iconsdownload.push(download);
 
@@ -59,8 +65,10 @@ var  gifcontent='<img id="gifstyle" class="gifstyle" src="'
           var favactive=  document.getElementById('iconfavactive'+[i]);
           iconsfavactive.push(favactive);
 
+              // creo una variable para cada url de imagen
           imagengif.push( url.data[i].images.original.url);
 
+              // funcion para mantener el color de los trendings 
           
           keepcolor( `${url.data[i].id}` , i);
 
@@ -70,50 +78,51 @@ var  gifcontent='<img id="gifstyle" class="gifstyle" src="'
 // =======================interaccion con ICONOS----------------------------------------------------------
               
 //========================================for download====================================================================
-    for(let j=0; j<iconsdownload.length; j++){
-     
-      iconsdownload[j].addEventListener('click',()=>{
-        var iconoparadescarga= iconsdownload[j];
-        var bajaresto= iconoparadescarga.getAttribute("data-src");
-              bajar(bajaresto);         
-      })
-    }
+
+                for(let j=0; j<iconsdownload.length; j++){
+                
+                  iconsdownload[j].addEventListener('click',()=>{
+                    var iconoparadescarga= iconsdownload[j];
+                    var bajaresto= iconoparadescarga.getAttribute("data-src");
+                          bajar(bajaresto);         
+                  })
+                }
 //=========================================for download==================================================================
 
 
 
-//for favoritos===================================-------------------------------++++++++++++++
+//favoritos===================================-------------------------------++++++++++++++
 
 
+                  for(let g=0; g< iconsfav.length; g++){
+                  
+                    iconsfav[g].addEventListener( 'click' , ()=>{
+                      iconsfavactive[g].style.display= 'block';
+                      iconsfav[g].style.display= 'none';
+                      
+                    var id_array= url.data[g].id;
 
-for(let g=0; g< iconsfav.length; g++){
-  
-  
-  
-  iconsfav[g].addEventListener( 'click' , ()=>{
-    iconsfavactive[g].style.display= 'block';
-    iconsfav[g].style.display= 'none';
-    
-  var id_array= url.data[g].id;
+                        agregar(id_array);
+                        agregarfav( );                   
+                                               })
 
-    agregar(id_array);
-   
-  })
-  iconsfavactive[g].addEventListener( 'click' , ()=>{
-  var favoritos_eliminar= url.data[g].id;
-     iconsfavactive[g].style.display= 'none';
-    iconsfav[g].style.display= 'block';
+                    iconsfavactive[g].addEventListener( 'click' , ()=>{
+                    var favoritos_eliminar= url.data[g].id;
+                      iconsfavactive[g].style.display= 'none';
+                      iconsfav[g].style.display= 'block';
 
-   quitar(favoritos_eliminar);
-   arrayfavoritos.splice(url.data[g].id, 1);
-    
-   })  
-}
+                       quitar(favoritos_eliminar);
+                       var indicefav= arrayfavoritos.indexOf(favoritos_eliminar);
+                       arrayfavoritos.splice(indicefav, 1);
+                        location.reload(true);
+                        
+                    })  
+                  }
 
 // agregar gifs al lstorage
 
+// funcion para agregar gif en modo max
 function agregarmax(fav){
-
 
                       almacenamiento= localStorage.getItem('favoritos');
                       
@@ -127,30 +136,28 @@ function agregarmax(fav){
                       localStorage.setItem('favoritos', JSON.stringify(almacenamiento));
                       
                       }
+      // funcion para agregar gifs de trendings
 function agregar(fav){
 
+                    var indice = arrayfavoritos.indexOf(fav);
+                    if ( indice < 0){
+                        arrayfavoritos.push(fav);
+                        
+                    } else {
+                      arrayfavoritos.splice(indice, 1);
+                        
+                    }
+                    localStorage.setItem('favoritos', JSON.stringify(arrayfavoritos)); // me lo convierte en string   
+                    location.reload(true);
 
-  var indice = arrayfavoritos.indexOf(fav);
-  if ( indice < 0){
-      arrayfavoritos.push(fav);
-      
-  } else {
-    arrayfavoritos.splice(indice, 1);
-      
-  }
-  localStorage.setItem('favoritos', JSON.stringify(arrayfavoritos)); // me lo convierte en string   
-}
-                     
-// agregar gifs al lstorage
-
-
-// quitar gifs
-
+                  }
+                    
+// quitar gifs, lo saca del lstorage
 function quitar(fav){
   var eliminado= fav;
   almacenamiento= localStorage.getItem('favoritos');
   alm_parse= JSON.parse(almacenamiento);
-console.log(alm_parse)
+
   var indice= alm_parse.indexOf(eliminado);
                 alm_parse.splice(indice, 1);
 
@@ -167,36 +174,29 @@ console.log(alm_parse)
                 }
                 almacenamiento2.push (alm_parse[p]);
                 localStorage.setItem('favoritos', JSON.stringify(almacenamiento2));
+                
 
  
                     }}
-// quitar gifs
-// color corazon
 
-
+// funcion para mantener el color del corazon
 function keepcolor( id , letrafor ){
 
-  
+                      if (arrayfavoritos.indexOf(id) == -1){
+                        iconsfavactive[letrafor].style.display= 'none';
+                        iconsfav[letrafor].style.display= 'block';
+                      }else {
+                        iconsfavactive[letrafor].style.display= 'block';
+                        iconsfav[letrafor].style.display= 'none';
+                    }
+                                    }
 
-  if (arrayfavoritos.indexOf(id) == -1){
-    iconsfavactive[letrafor].style.display= 'none';
-    iconsfav[letrafor].style.display= 'block';
-  }else {
-    iconsfavactive[letrafor].style.display= 'block';
-    iconsfav[letrafor].style.display= 'none';
-}
-}
-
-
+//favoritos===================================-------------------------------++++++++++++++
 
 
-
-
-
-//for favoritos===================================-------------------------------++++++++++++++
 //for max===================================-------------------------------++++++++++++++
 
-
+// pusheo los gifs a max
 for(let x=0; x<iconsmax.length; x++){
   iconsmax[x].addEventListener('click',()=>{
     
@@ -260,8 +260,6 @@ iconfavactivemax= document.getElementById('iconfavactivemax'+[x]);
     }
 
 
-
-
   iconfavmax.addEventListener( 'click' , ()=>{
    
     iconfavactivemax.style.display= 'block';
@@ -282,11 +280,10 @@ iconfavactivemax= document.getElementById('iconfavactivemax'+[x]);
       
      })  
 
-
 //favoritos max
 
 
-  });} //cierre for max=========================
+  });} //---------------------cierre for max=========================
 
 
   // funcionamiento x de max===========================
@@ -294,17 +291,7 @@ iconfavactivemax= document.getElementById('iconfavactivemax'+[x]);
 var xdemax= document.getElementById ('xdemax');
 xdemax.addEventListener('click', ()=> {
   location.reload(true);
-
 });
-
-
-
-
-
-
-
-
-
 }
  
 trendingGifos()
@@ -316,14 +303,9 @@ async function bajar(url){
           invokeSaveAsDialog(blob);
 }
 
-
-
 // FUNCION PARA GUARDAR GIFS, USO RECORDRTC.JS=======================================================================
 
-
-
 // -------------- BOTONES carrousel HOVER Y MODOS ------------------------------------------
-
 
 var flechaleft= document.getElementById('flechaleft');
 var flecharight= document.getElementById('flecharight');
@@ -378,8 +360,6 @@ flecharight.addEventListener('click',  () => {
  } );
 
 // -------------- CARRUSEL------------------------------------------
-
-
 
 
 
