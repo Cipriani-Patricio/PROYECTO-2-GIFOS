@@ -247,36 +247,49 @@
        height: 200px;
    }
           
-  .hover{
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   opacity: 0;
-   background: #572EE5;
-          
-   .divicons{
-       display: flex;
-      width: auto;
-       margin-left: 30%;
-       margin-top: 5px;
-       align-items: center
-        ;
-      
-       .icon{
-           width: 30px;
-           height: 30px;
-           margin-left: 7px;
-           cursor: pointer;
-
-       }
-       .iconfavactive{
-           cursor: pointer;
-           width: 30px;
-           height: 30px;
-           background: #FFFFFF;
-           opacity: 1;   
-           display: none;
-       }
+   .hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #572EE5;
+           display: block;
+    .divicons{
+        display: flex;
+        height :auto;
+                width: auto;
+                 margin-left: 30%;
+                 margin-top: 5px;
+                 align-items: center;
+ 
+       
+        .icon{
+            width: 30px;
+            height: 30px;
+            margin-left: 7px;
+            cursor: pointer;
+ 
+        }
+        .iconfavactive{
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            background: #FFFFFF;
+            opacity: 1;   
+            display: none;
+        }
+ 
+        .iconfav{
+         display: block;
+     }
+     .icondownload{
+         display: block;
+     }
+     .iconmax{
+             position: relative;
+             height: 30px;
+             width: 30px;
+     }
 
        .iconfav:hover{
            content: url(images/icon-fav-hover.svg);
@@ -320,7 +333,7 @@ margin-left: 7px;
     }
     // -----------------------FIN PRINCIPAL--------------------------------------------------------
 
-    // -----------------------FAVORITOS y MaS GIFOS--------------------------------------------------------
+    // -----------------------FAVORITOS y MiS GIFOS--------------------------------------------------------
     .favoritos{
         .imagen-fav-sin-contenido{
             height: 150px;
@@ -340,10 +353,11 @@ margin-left: 7px;
         }
          .contenidofav{
             display: grid;
-            grid-template-columns:  260px 260px 260px 260px;
-            
-           column-gap: 28px;
-           row-gap: 28px;
+        grid-template-columns:  260px 260px 260px 260px;
+        max-height: 656px;
+        overflow: hidden;
+       column-gap: 28px;
+       row-gap: 28px;
            
            .cont-gifstyle{
             position: relative;
@@ -366,36 +380,46 @@ margin-left: 7px;
         position: absolute;
         width: 100%;
         height: 100%;
+        opacity: 0;
         background: #572EE5;
-        
-    
-    
-        
-    
+               display: block;
         .divicons{
             display: flex;
-           width: auto;
-            margin-left: 30%;
-            margin-top: 5px;
-            align-items: center
-             ;
+            height :auto;
+                    width: auto;
+                     margin-left: 30%;
+                     margin-top: 5px;
+                     align-items: center;
+     
            
             .icon{
                 width: 30px;
                 height: 30px;
                 margin-left: 7px;
                 cursor: pointer;
-    
+     
             }
             .iconfavactive{
                 cursor: pointer;
                 width: 30px;
                 height: 30px;
                 background: #FFFFFF;
-                opacity: 1;
-                
-                
+                opacity: 1;   
+                display: block;
             }
+     
+            .iconfav{
+             display: block;
+         }
+         .icondownload{
+             display: block;
+         }
+         .iconmax{
+                 position: relative;
+                 height: 30px;
+                 width: 30px;
+         }
+         
     
             .iconfav:hover{
                 content: url(images/icon-fav-hover.svg);
@@ -412,11 +436,15 @@ margin-left: 7px;
             }
         }
        }
+
+    .hover:hover{
+        opacity: 0.7;
+    }
     }
          }
         
     }
-    // -----------------------FIN FAVORITOS y MaS GIFOS--------------------------------------------------------
+    // -----------------------FIN FAVORITOS y MiS GIFOS--------------------------------------------------------
     
     // -----------------------TRENDING GIFOS--------------------------------------------------------
     
@@ -498,23 +526,51 @@ margin-left: 7px;
                                 height: 275px;
                                 width: auto;
                                      }
-                            .hover{
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                opacity: 0;
-                                background: #572EE5;
-                                
-                                
-                                     .divicons  {
-                                            margin-left: 53%;
-                                            margin-top: 5px;
-                                             .icon{
-                                                 margin-left: 7px;
-                                                  }
-                                                }
+                                     .hover{
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        opacity: 0;
+                                        background: #572EE5;
+                                               display: block;
+                                        .divicons{
+                                            display: flex;
+                                            height :auto;
+                                                    width: auto;
+                                                     margin-left: 30%;
+                                                     margin-top: 5px;
+                                                     align-items: center;
+                                     
+                                           
+                                            .icon{
+                                                width: 30px;
+                                                height: 30px;
+                                                margin-left: 7px;
+                                                cursor: pointer;
+                                     
+                                            }
+                                            .iconfavactive{
+                                                cursor: pointer;
+                                                width: 30px;
+                                                height: 30px;
+                                                background: #FFFFFF;
+                                                opacity: 1;   
+                                                display: none;
+                                            }
+                                     
+                                            .iconfav{
+                                             display: block;
+                                         }
+                                         .icondownload{
+                                             display: block;
+                                         }
+                                         .iconmax{
+                                                 position: relative;
+                                                 height: 30px;
+                                                 width: 30px;
+                                         }
                             
-    
+                                        }
                                  }
                             
                         }

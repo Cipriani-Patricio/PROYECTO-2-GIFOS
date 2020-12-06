@@ -6,6 +6,7 @@
 body {
   position: fixed;
   height: 100%;
+  background: #37383C;
 }
 
 .trending-gifos-max {
@@ -262,4 +263,4 @@ body {
     margin: 10px 0px 0px 0px;
   }
 }
-/*# sourceMappingURL=stylemax.css.map */
+/*# sourceMappingURL=stylemaxdark.css.map */

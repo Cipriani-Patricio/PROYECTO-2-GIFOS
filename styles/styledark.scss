@@ -12,7 +12,7 @@ body{
     background: #37383C;
     height: auto;
     width: 100%;
-    border: $borde;
+    border: 1px solid  #37383C;
     }
 
     // --------------ESTILOS MENU-----------------------------------------------------------------------
@@ -21,7 +21,7 @@ body{
       
         width: 100%;
         position: fixed;
-   
+        z-index: 100;
     
    .menu{ 
        display: flex;
@@ -310,36 +310,42 @@ body{
                height: 120px;
            }
                   
-          .hover{
-           position: absolute;
-           width: 100%;
-           height: 100%;
-           opacity: 0;
-           background: #572EE5;
-                  
-           .divicons{
-               display: flex;
-              width: auto;
-               margin-left: 30%;
-               margin-top: 5px;
-               align-items: center
-                ;
-              
-               .icon{
-                   width: 20px;
-                   height: 20px;
-                   margin-left: 7px;
-                   cursor: pointer;
-       
-               }
-               .iconfavactive{
-                   cursor: pointer;
-                   width: 20px;
-                   height: 20px;
-                   background: #FFFFFF;
-                   opacity: 1;   
-                   display: none;
-               }
+           .hover{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background: #572EE5;
+        
+            .divicons{
+                display: flex;
+            width: 100%;
+            height: 100%;
+                    
+                align-items: center;
+            position: relative;
+                .icon{    
+                    cursor: pointer;
+                }
+                .iconfavactive{
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    background: #FFFFFF;
+                    opacity: 1;
+                    display: none;
+                }
+                .iconfav{
+                    display: none;
+                }
+                .icondownload{
+                    display: none;
+                }
+                .iconmax{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                }
        
                .iconfav:hover{
                    content: url(images/icon-fav-hover.svg);
@@ -359,7 +365,7 @@ body{
        }
        
        .hover:hover{
-           opacity: 0.7;
+           opacity: 0;
        }
        .titulogif{
        font-size: 12px;
@@ -484,38 +490,39 @@ margin-bottom: 46px;
    
    .hover{
     position: absolute;
-    width: auto;
+    width: 100%;
     height: 100%;
     opacity: 0;
     background: #572EE5;
-    
-
-
-    
 
     .divicons{
         display: flex;
-       width: auto;
-        margin-left: 30%;
-        margin-top: 5px;
-        align-items: center
-         ;
-       
-        .icon{
-            width: 20px;
-            height: 20px;
-            margin-left: 7px;
+    width: 100%;
+    height: 100%;
+            
+        align-items: center;
+    position: relative;
+        .icon{    
             cursor: pointer;
-
         }
         .iconfavactive{
             cursor: pointer;
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             background: #FFFFFF;
             opacity: 1;
-           
-            
+            display: none;
+        }
+        .iconfav{
+            display: none;
+        }
+        .icondownload{
+            display: none;
+        }
+        .iconmax{
+                position: absolute;
+                height: 100%;
+                width: 100%;
         }
 
         .iconfav:hover{
@@ -535,9 +542,7 @@ margin-bottom: 46px;
    }
 }
 
-.hover:hover{
-    opacity: 0.7;
-}
+
 .titulogif{
 font-size: 12px;
 margin-top: 20px;
@@ -574,7 +579,9 @@ margin-left: 7px;
 
 
 // -----------------------CREAR GIFOS----------------------------------------------------------------------------------
-
+.creargifogris{
+    content: url(images/CTA-crear-gifo-active.svg);                   
+}
 
 .crear_gifos{
     width: 100%;
@@ -596,14 +603,14 @@ margin-left: 7px;
 .camara1{
 width: 123px;
 height: auto;
+content: url(images/camara-modo-noc.svg);
 
 }
 .luzcamara{
     width: 91px;
     height: 151px;
-    
-    background-image: linear-gradient(267deg, rgba(136,243,226,0.00) 22%, #50E3C2 100%);
-    clip-path: polygon(0 40% ,100% 0, 100% 100%, 0 60%);
+    background-image: linear-gradient(267deg, rgba(136,243,226,0.00) 10%, #50E3C2 100%);
+    clip-path: polygon(0 40% ,100% 0, 100% 100%, 0 60%);  
 }
 
 }
@@ -614,33 +621,159 @@ height: auto;
      flex-direction: column;
      align-items: center;
      margin-bottom: 24px;
+     width: 47.77%;
 
      
      .nuevo_gifo{
-         
+         position: relative; 
+         display: flex;  
+         justify-content: center;
+         align-items: center;
          margin-left: 0.2777%;
-         width: 688px;
+         width: 100%;
          height: 390px;
          border:1px solid #FFFFFF;
+
+         .subiendo{
+             
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: #572EE5;
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            
+            .cargando{
+                height: 25px;
+            }
+            .texto{
+                margin-top: 10px;
+                font-family: $letra-principal;
+                font-size: 15px;
+                color: #FFFFFF;
+                text-align: center;
+            }
+         }
+
+
+         .gifsubido{
+             
+             
+             .iconoscrear{
+                 position: absolute;
+                 margin-left: 500px;
+                 margin-bottom: 300px;
+                 .icon-download-crear{
+                     height: 40px;
+                     margin-right: 5px;
+                 }
+                 .icon-download-crear:hover{
+                     content: url(images/icon-download-hover.svg);
+                     cursor: pointer;
+                 }
+                 .icon-link{
+                    height: 40px;
+                }
+                .icon-link:hover{
+                    content: url(images/icon-link-hover.svg);
+                    cursor: pointer;
+                }
+             }
+         }
+
+
+         .primerpaso{
+             display: none;
+         }
+         .video{
+             
+             height: 80%;
+             width: 80%;
+         }
+         .textoinicial{
+             text-align: center;
+             .violeta{
+                font-family: $letra-principal;
+                font-weight: bold;
+                font-size: 25px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 35px;
+                .celeste{
+                    color: #50E3C2;
+                }}
+                .negro{
+                        font-family: $letra-3;
+                        font-size: 16px;
+                        color: #ffffff;
+                        text-align: center;
+                        line-height: 29px;
+                }
+             
+         }
+
      }
      
      
      .pasos{
+         position: relative;
          width: 146px;
          height: 32px;
          display: flex;
          justify-content: space-between;
          margin-top: 24px;
+         .contador{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             position: absolute;
+             font-family: $letra-principal;
+             font-weight: bold;
+            color: #ffffff;
+             font-size: 16px;
+             margin-left: 250px;
+             width: 200px;
+             height: 30px;
+             text-align: center;
+             
+         }
+         .repetir{
+             color: #FFFFFF;
+         }
+         .repetir:hover{
+             cursor: pointer;
+         }
+         
+         .paso1{
+             content: url(images/paso-a-paso-mod-noc-1.svg);
+             cursor: pointer;
+         }
+         .paso2{
+            content: url(images/paso-a-paso-mod-noc-2.svg);
+            cursor: pointer;
+        }
+        .paso3{
+            content: url(images/paso-a-paso-mod-noc-3.svg);
+            cursor: pointer;
+        }
      }
 
      .linea{
          width: 795.9px;
          height: 0.01px;
-         border: 4px solid #FFFFFF;
+         border: 4px solid #50E3C2;
          margin-top: 25px;
      }
 
      .comenzar{
+         display: flex;
+         align-items: center;
+         justify-content: center;
         background: none;
         font-family: $letra-principal;
         font-weight: bold;
@@ -654,17 +787,22 @@ height: auto;
         color: #FFFFFF;
         letter-spacing: 0;
         text-align: center;
+
+        cursor: pointer;
          
      }
  }
 
  .pelicula{
 margin-top: 200px;
+margin-left: 50px;
+ content: url(images/pelicula-modo-noc.svg);
  }
 }
 
 
 // -----------------------FIN CREAR GIFOS---------------------------------------------------------------------------
+
 
 
 
@@ -679,6 +817,8 @@ margin-top: 200px;
          flex-direction: column;
          align-items: center;
          background: #222326;
+         margin-top: 20px;
+
         h1{
         margin-top: 46px;
         font-family:$letra-principal;
@@ -745,23 +885,16 @@ margin-top: 200px;
                 height: 100%;
                 opacity: 0;
                 background: #572EE5;
-                
-           
-
-                
-
+            
                 .divicons{
                     display: flex;
-                   width: auto;
-                    margin-left: 30%;
-                    margin-top: 5px;
-                    align-items: center
-                     ;
-                   
-                    .icon{
-                        margin-left: 7px;
+                width: 100%;
+                height: 100%;
+                        
+                    align-items: center;
+                position: relative;
+                    .icon{    
                         cursor: pointer;
-
                     }
                     .iconfavactive{
                         cursor: pointer;
@@ -770,7 +903,17 @@ margin-top: 200px;
                         background: #FFFFFF;
                         opacity: 1;
                         display: none;
-                        
+                    }
+                    .iconfav{
+                        display: none;
+                    }
+                    .icondownload{
+                        display: none;
+                    }
+                    .iconmax{
+                            position: absolute;
+                            height: 100%;
+                            width: 100%;
                     }
 
                     .iconfav:hover{
@@ -796,9 +939,7 @@ margin-top: 200px;
                
             }
 
-            .hover:hover{
-                opacity: 0.7;
-            }
+            
         .titulogif{
             font-size: 16px;
             margin-top: 75px;
@@ -845,7 +986,17 @@ margin-top: 200px;
            color: gray;
            }
          }
-
+         .iconfacebook:hover{
+            content: url(images/icon_facebook_hover.svg);
+                      }
+                      .icontwitter:hover{
+            content: url(images/icon-twitter-hover.svg);
+                          
+                   }
+                   .iconinstagram:hover{
+            content: url(images/icon_instagram-hover.svg);
+                          
+                   }
          .derechos{
              margin-top: 47px;
             font-family: $letra-3;

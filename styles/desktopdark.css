@@ -259,11 +259,13 @@
     height: 100%;
     opacity: 0;
     background: #572EE5;
+    display: block;
   }
   .principal .cont-busqueda .contenedor-gif-hover .hover .divicons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: auto;
     width: auto;
     margin-left: 30%;
     margin-top: 5px;
@@ -284,6 +286,17 @@
     background: #FFFFFF;
     opacity: 1;
     display: none;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconfav {
+    display: block;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .icondownload {
+    display: block;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconmax {
+    position: relative;
+    height: 30px;
+    width: 30px;
   }
   .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconfav:hover {
     content: url(images/icon-fav-hover.svg);
@@ -330,6 +343,8 @@
     display: grid;
     -ms-grid-columns: 260px 260px 260px 260px;
         grid-template-columns: 260px 260px 260px 260px;
+    max-height: 656px;
+    overflow: hidden;
     -webkit-column-gap: 28px;
             column-gap: 28px;
     row-gap: 28px;
@@ -350,12 +365,15 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    opacity: 0;
     background: #572EE5;
+    display: block;
   }
   .favoritos .contenidofav .cont-gifstyle .hover .divicons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: auto;
     width: auto;
     margin-left: 30%;
     margin-top: 5px;
@@ -375,6 +393,18 @@
     height: 30px;
     background: #FFFFFF;
     opacity: 1;
+    display: block;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconfav {
+    display: block;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .icondownload {
+    display: block;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconmax {
+    position: relative;
+    height: 30px;
+    width: 30px;
   }
   .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconfav:hover {
     content: url(images/icon-fav-hover.svg);
@@ -387,6 +417,9 @@
   .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconmax:hover {
     content: url(images/icon-max-hover.svg);
     cursor: pointer;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover:hover {
+    opacity: 0.7;
   }
   .trending-gifos {
     width: 100%;
@@ -475,13 +508,44 @@
     height: 100%;
     opacity: 0;
     background: #572EE5;
+    display: block;
   }
   .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons {
-    margin-left: 53%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    width: auto;
+    margin-left: 30%;
     margin-top: 5px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .icon {
+    width: 30px;
+    height: 30px;
     margin-left: 7px;
+    cursor: pointer;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .iconfavactive {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    opacity: 1;
+    display: none;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .iconfav {
+    display: block;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .icondownload {
+    display: block;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .iconmax {
+    position: relative;
+    height: 30px;
+    width: 30px;
   }
   .trending-gifos .contenedorgaleria .galeria .hover:hover {
     opacity: 0.7;

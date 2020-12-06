@@ -131,7 +131,7 @@ function vermasFav(){
 vermasFav()
 
 vermasboton.addEventListener('click', ()=> {
-   contenedorfav.style.maxHeight= '1000px';
+   contenedorfav.style.maxHeight= '2000px';
    vermasboton.style.display= 'none';
 })
 

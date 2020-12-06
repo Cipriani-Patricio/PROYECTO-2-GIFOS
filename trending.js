@@ -1,6 +1,6 @@
 
-// --------------------------Variables---------------------------
-
+// ------------var corazon= document.getElementById('corazon');
+var corazon= document.getElementById('corazon');
 var contenedor= document.getElementById('galeria');
 const apiKey= 'qVaHwLcNfQCkaFG9NwjeZcEtilqJDo2x';
 var iconsdownload= [];
@@ -9,7 +9,6 @@ var gificonmax= [];
 var imagengif=[];
 var iconsfav=[];
 var iconsfavactive=[];
-
 // -------------------creacion de arrayfavoritos----------------------
 
 var stringlocalstorage= localStorage.getItem('favoritos');
@@ -103,7 +102,7 @@ async function trendingGifos() {
                     var id_array= url.data[g].id;
 
                         agregar(id_array);
-                        agregarfav( );                   
+                                          
                                                })
 
                     iconsfavactive[g].addEventListener( 'click' , ()=>{
@@ -114,7 +113,8 @@ async function trendingGifos() {
                        quitar(favoritos_eliminar);
                        var indicefav= arrayfavoritos.indexOf(favoritos_eliminar);
                        arrayfavoritos.splice(indicefav, 1);
-                        location.reload(true);
+                       if(corazon != null){
+                         location.reload(true);}
                         
                     })  
                   }
@@ -148,7 +148,10 @@ function agregar(fav){
                         
                     }
                     localStorage.setItem('favoritos', JSON.stringify(arrayfavoritos)); // me lo convierte en string   
-                    location.reload(true);
+                    if(corazon != null){
+                      location.reload(true);}
+                     
+
 
                   }
                     
@@ -161,7 +164,7 @@ function quitar(fav){
   var indice= alm_parse.indexOf(eliminado);
                 alm_parse.splice(indice, 1);
 
-                localStorage.clear();
+                localStorage.removeItem('favoritos');
 
                 for (p=0; p< alm_parse.length ; p++){
                   almacenamiento2= localStorage.getItem('favoritos');
@@ -202,6 +205,7 @@ for(let x=0; x<iconsmax.length; x++){
     
 
     var thememax= document.getElementById('thememax');
+    
     thememax.href= 'styles/stylemax.css';
     var contenedormaxgaleria= document.getElementById('galeriamax');
 
@@ -290,7 +294,29 @@ iconfavactivemax= document.getElementById('iconfavactivemax'+[x]);
 
 var xdemax= document.getElementById ('xdemax');
 xdemax.addEventListener('click', ()=> {
+
+
+  var thememax= document.getElementById('thememax');
+  thememax.href= '';
+
+  var contenedormax= document.getElementById('trendiggifosmax');
+    contenedormax.style.display='none';
+    var menuchau= document.getElementById('menuprincipal');
+     menuchau.style.display='block';
+     var contenedornomax= document.getElementById('trendiggifos');
+    contenedornomax.style.display='flex';
+  
+     var principalchau= document.getElementById('principal');
+     principalchau.style.display='flex';
+    var piechau= document.getElementById('pie');
+    console.log()
+    piechau.style.display='block';
+
+var corazonfav= document.getElementById('corazon');
+if(corazonfav != null){
   location.reload(true);
+}
+
 });
 }
  

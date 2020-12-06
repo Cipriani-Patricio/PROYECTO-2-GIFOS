@@ -296,7 +296,7 @@ let urlSugerencia= `https://api.giphy.com/v1/gifs/search/tags?api_key=qVaHwLcNfQ
 
 let urlsugerencia1= await fetch(urlSugerencia);
 let urlsugerencia2= await urlsugerencia1.json();
-console.log (urlsugerencia2);
+
 
 
 for ( let i=0; i<urlsugerencia2.data.length; i++){
@@ -319,6 +319,7 @@ var aprietosug= document.getElementsByClassName('cadasugerencia');
 aprietosug[i].addEventListener('click', ()=>{
     input.value= urlsugerencia2.data[i].name;
     
+
     let contenedorsugerencias= document.getElementById('sugerencias');
     contenedorsugerencias.style.display= 'none';
     

@@ -7,12 +7,13 @@ body {
   background: #37383C;
   height: auto;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid  #37383C;
 }
 
 header {
   width: 100%;
   position: fixed;
+  z-index: 100;
 }
 
 header .menu {
@@ -368,28 +369,39 @@ header .menu .creargifo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: auto;
-  margin-left: 30%;
-  margin-top: 5px;
+  width: 100%;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 7px;
   cursor: pointer;
 }
 
 .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconfavactive {
   cursor: pointer;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background: #FFFFFF;
   opacity: 1;
   display: none;
+}
+
+.principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconfav {
+  display: none;
+}
+
+.principal .cont-busqueda .contenedor-gif-hover .hover .divicons .icondownload {
+  display: none;
+}
+
+.principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconmax {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconfav:hover {
@@ -408,7 +420,7 @@ header .menu .creargifo {
 }
 
 .principal .cont-busqueda .hover:hover {
-  opacity: 0.7;
+  opacity: 0;
 }
 
 .principal .cont-busqueda .titulogif {
@@ -534,7 +546,7 @@ header .menu .creargifo {
 
 .favoritos .contenidofav .cont-gifstyle .hover {
   position: absolute;
-  width: auto;
+  width: 100%;
   height: 100%;
   opacity: 0;
   background: #572EE5;
@@ -544,27 +556,39 @@ header .menu .creargifo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: auto;
-  margin-left: 30%;
-  margin-top: 5px;
+  width: 100%;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .favoritos .contenidofav .cont-gifstyle .hover .divicons .icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 7px;
   cursor: pointer;
 }
 
 .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconfavactive {
   cursor: pointer;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background: #FFFFFF;
   opacity: 1;
+  display: none;
+}
+
+.favoritos .contenidofav .cont-gifstyle .hover .divicons .iconfav {
+  display: none;
+}
+
+.favoritos .contenidofav .cont-gifstyle .hover .divicons .icondownload {
+  display: none;
+}
+
+.favoritos .contenidofav .cont-gifstyle .hover .divicons .iconmax {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconfav:hover {
@@ -580,10 +604,6 @@ header .menu .creargifo {
 .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconmax:hover {
   content: url(images/icon-max-hover.svg);
   cursor: pointer;
-}
-
-.favoritos .contenidofav .hover:hover {
-  opacity: 0.7;
 }
 
 .favoritos .contenidofav .titulogif {
@@ -616,6 +636,10 @@ header .menu .creargifo {
   height: 435px;
 }
 
+.creargifogris {
+  content: url(images/CTA-crear-gifo-active.svg);
+}
+
 .crear_gifos {
   width: 100%;
   height: auto;
@@ -645,12 +669,13 @@ header .menu .creargifo {
 .crear_gifos .camara .camara1 {
   width: 123px;
   height: auto;
+  content: url(images/camara-modo-noc.svg);
 }
 
 .crear_gifos .camara .luzcamara {
   width: 91px;
   height: 151px;
-  background-image: linear-gradient(267deg, rgba(136, 243, 226, 0) 22%, #50E3C2 100%);
+  background-image: linear-gradient(267deg, rgba(136, 243, 226, 0) 10%, #50E3C2 100%);
   -webkit-clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 60%);
           clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 60%);
 }
@@ -667,16 +692,121 @@ header .menu .creargifo {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 24px;
+  width: 47.77%;
 }
 
 .crear_gifos .centrado .nuevo_gifo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 0.2777%;
-  width: 688px;
+  width: 100%;
   height: 390px;
   border: 1px solid #FFFFFF;
 }
 
+.crear_gifos .centrado .nuevo_gifo .subiendo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #572EE5;
+  opacity: 0.7;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.crear_gifos .centrado .nuevo_gifo .subiendo .cargando {
+  height: 25px;
+}
+
+.crear_gifos .centrado .nuevo_gifo .subiendo .texto {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.crear_gifos .centrado .nuevo_gifo .gifsubido .iconoscrear {
+  position: absolute;
+  margin-left: 500px;
+  margin-bottom: 300px;
+}
+
+.crear_gifos .centrado .nuevo_gifo .gifsubido .iconoscrear .icon-download-crear {
+  height: 40px;
+  margin-right: 5px;
+}
+
+.crear_gifos .centrado .nuevo_gifo .gifsubido .iconoscrear .icon-download-crear:hover {
+  content: url(images/icon-download-hover.svg);
+  cursor: pointer;
+}
+
+.crear_gifos .centrado .nuevo_gifo .gifsubido .iconoscrear .icon-link {
+  height: 40px;
+}
+
+.crear_gifos .centrado .nuevo_gifo .gifsubido .iconoscrear .icon-link:hover {
+  content: url(images/icon-link-hover.svg);
+  cursor: pointer;
+}
+
+.crear_gifos .centrado .nuevo_gifo .primerpaso {
+  display: none;
+}
+
+.crear_gifos .centrado .nuevo_gifo .video {
+  height: 80%;
+  width: 80%;
+}
+
+.crear_gifos .centrado .nuevo_gifo .textoinicial {
+  text-align: center;
+}
+
+.crear_gifos .centrado .nuevo_gifo .textoinicial .violeta {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 35px;
+}
+
+.crear_gifos .centrado .nuevo_gifo .textoinicial .violeta .celeste {
+  color: #50E3C2;
+}
+
+.crear_gifos .centrado .nuevo_gifo .textoinicial .negro {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 29px;
+}
+
 .crear_gifos .centrado .pasos {
+  position: relative;
   width: 146px;
   height: 32px;
   display: -webkit-box;
@@ -688,14 +818,67 @@ header .menu .creargifo {
   margin-top: 24px;
 }
 
+.crear_gifos .centrado .pasos .contador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 16px;
+  margin-left: 250px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+}
+
+.crear_gifos .centrado .pasos .repetir {
+  color: #FFFFFF;
+}
+
+.crear_gifos .centrado .pasos .repetir:hover {
+  cursor: pointer;
+}
+
+.crear_gifos .centrado .pasos .paso1 {
+  content: url(images/paso-a-paso-mod-noc-1.svg);
+  cursor: pointer;
+}
+
+.crear_gifos .centrado .pasos .paso2 {
+  content: url(images/paso-a-paso-mod-noc-2.svg);
+  cursor: pointer;
+}
+
+.crear_gifos .centrado .pasos .paso3 {
+  content: url(images/paso-a-paso-mod-noc-3.svg);
+  cursor: pointer;
+}
+
 .crear_gifos .centrado .linea {
   width: 795.9px;
   height: 0.01px;
-  border: 4px solid #FFFFFF;
+  border: 4px solid #50E3C2;
   margin-top: 25px;
 }
 
 .crear_gifos .centrado .comenzar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: none;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -709,10 +892,13 @@ header .menu .creargifo {
   color: #FFFFFF;
   letter-spacing: 0;
   text-align: center;
+  cursor: pointer;
 }
 
 .crear_gifos .pelicula {
   margin-top: 200px;
+  margin-left: 50px;
+  content: url(images/pelicula-modo-noc.svg);
 }
 
 .trending-gifos-max {
@@ -732,6 +918,7 @@ header .menu .creargifo {
       -ms-flex-align: center;
           align-items: center;
   background: #222326;
+  margin-top: 20px;
 }
 
 .trending-gifos h1 {
@@ -811,16 +998,15 @@ header .menu .creargifo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: auto;
-  margin-left: 30%;
-  margin-top: 5px;
+  width: 100%;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .icon {
-  margin-left: 7px;
   cursor: pointer;
 }
 
@@ -831,6 +1017,20 @@ header .menu .creargifo {
   background: #FFFFFF;
   opacity: 1;
   display: none;
+}
+
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .iconfav {
+  display: none;
+}
+
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .icondownload {
+  display: none;
+}
+
+.trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .iconmax {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .iconfav:hover {
@@ -846,10 +1046,6 @@ header .menu .creargifo {
 .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .iconmax:hover {
   content: url(images/icon-max-hover.svg);
   cursor: pointer;
-}
-
-.trending-gifos .contenedorgaleria .galeria .hover:hover {
-  opacity: 0.7;
 }
 
 .trending-gifos .contenedorgaleria .galeria .titulogif {
@@ -895,6 +1091,18 @@ footer .iconosredes {
 
 footer .iconosredes a {
   color: gray;
+}
+
+footer .iconfacebook:hover {
+  content: url(images/icon_facebook_hover.svg);
+}
+
+footer .icontwitter:hover {
+  content: url(images/icon-twitter-hover.svg);
+}
+
+footer .iconinstagram:hover {
+  content: url(images/icon_instagram-hover.svg);
 }
 
 footer .derechos {
@@ -1168,11 +1376,13 @@ footer .derechos {
     height: 100%;
     opacity: 0;
     background: #572EE5;
+    display: block;
   }
   .principal .cont-busqueda .contenedor-gif-hover .hover .divicons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: auto;
     width: auto;
     margin-left: 30%;
     margin-top: 5px;
@@ -1193,6 +1403,17 @@ footer .derechos {
     background: #FFFFFF;
     opacity: 1;
     display: none;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconfav {
+    display: block;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .icondownload {
+    display: block;
+  }
+  .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconmax {
+    position: relative;
+    height: 30px;
+    width: 30px;
   }
   .principal .cont-busqueda .contenedor-gif-hover .hover .divicons .iconfav:hover {
     content: url(images/icon-fav-hover.svg);
@@ -1239,6 +1460,8 @@ footer .derechos {
     display: grid;
     -ms-grid-columns: 260px 260px 260px 260px;
         grid-template-columns: 260px 260px 260px 260px;
+    max-height: 656px;
+    overflow: hidden;
     -webkit-column-gap: 28px;
             column-gap: 28px;
     row-gap: 28px;
@@ -1259,12 +1482,15 @@ footer .derechos {
     position: absolute;
     width: 100%;
     height: 100%;
+    opacity: 0;
     background: #572EE5;
+    display: block;
   }
   .favoritos .contenidofav .cont-gifstyle .hover .divicons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: auto;
     width: auto;
     margin-left: 30%;
     margin-top: 5px;
@@ -1284,6 +1510,18 @@ footer .derechos {
     height: 30px;
     background: #FFFFFF;
     opacity: 1;
+    display: block;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconfav {
+    display: block;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .icondownload {
+    display: block;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconmax {
+    position: relative;
+    height: 30px;
+    width: 30px;
   }
   .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconfav:hover {
     content: url(images/icon-fav-hover.svg);
@@ -1296,6 +1534,9 @@ footer .derechos {
   .favoritos .contenidofav .cont-gifstyle .hover .divicons .iconmax:hover {
     content: url(images/icon-max-hover.svg);
     cursor: pointer;
+  }
+  .favoritos .contenidofav .cont-gifstyle .hover:hover {
+    opacity: 0.7;
   }
   .trending-gifos {
     width: 100%;
@@ -1384,13 +1625,44 @@ footer .derechos {
     height: 100%;
     opacity: 0;
     background: #572EE5;
+    display: block;
   }
   .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons {
-    margin-left: 53%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    width: auto;
+    margin-left: 30%;
     margin-top: 5px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .icon {
+    width: 30px;
+    height: 30px;
     margin-left: 7px;
+    cursor: pointer;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .iconfavactive {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    opacity: 1;
+    display: none;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .iconfav {
+    display: block;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .icondownload {
+    display: block;
+  }
+  .trending-gifos .contenedorgaleria .galeria .cont-gifstyle .hover .divicons .iconmax {
+    position: relative;
+    height: 30px;
+    width: 30px;
   }
   .trending-gifos .contenedorgaleria .galeria .hover:hover {
     opacity: 0.7;
