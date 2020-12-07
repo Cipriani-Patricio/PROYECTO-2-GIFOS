@@ -1098,7 +1098,7 @@ footer .derechos {
   margin-bottom: 23px;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 730px) {
   header {
     width: 100%;
     position: fixed;

@@ -111,8 +111,15 @@ equis.addEventListener('click',()=> {
 
 });
 
-//------------------funcion BUSQUEDA!!!!             
+//------------------funcion BUSQUEDA!!!!    
+
 async function mostrarBusqueda(inputValue) {
+  iconsmaxsearch=[];
+  iconsfavsearch=[];
+  iconsfavactivesearch=[];
+  imagengifsearch=[];
+
+
            contBusqueda.innerHTML= "";
            var pantalla= screen.width;
            if(pantalla< 560 ){
@@ -157,7 +164,6 @@ vermas3.style.display='none';
              let geturl= await fetch(url_busqueda);
              var url= await geturl.json();
              
-    
                   for ( let i=0; i<url.data.length; i++){
                     var id= url.data[i].id;
                      var  divResultado= document.createElement('div');
@@ -196,12 +202,15 @@ vermas3.style.display='none';
 
       var favsearch=  document.getElementById('iconfavsearch'+[i]);
       iconsfavsearch.push(favsearch);
-
+      
       iconsMax(url);
+
       favoritosSearch(url, i );
       keepcolor( id , i )
              } 
              descargar();
+
+                  
 
          
 
@@ -429,10 +438,13 @@ function keepcolor( id , letrafor ){
 // MAXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------
 
 function iconsMax(url){
+  
     for(let x=0; x<iconsmaxsearch.length; x++){
+  console.log(url)
+
     iconsmaxsearch[x].addEventListener('click',()=>{
     
-    
+    console.log(url);
     var thememax= document.getElementById('thememax');
     thememax.href= 'styles/stylemax.css';
     var contenedormaxgaleria= document.getElementById('galeriamax');
