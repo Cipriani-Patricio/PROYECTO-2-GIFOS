@@ -1355,7 +1355,7 @@ footer .derechos {
     -webkit-column-gap: 28px;
             column-gap: 28px;
     row-gap: 28px;
-    max-height: 684;
+    max-height: 684px;
     overflow: hidden;
   }
   .principal .cont-busqueda .contenedor-gif-hover {

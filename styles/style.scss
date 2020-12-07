@@ -297,11 +297,11 @@ body{
          .cont-busqueda{
              height: auto;
              display: grid;
-             grid-template-columns:  18.1% 18.1% ;
+             grid-template-columns:  156px 156px ;
             column-gap: 2%;
             row-gap: 25px;
-            max-height: 845px;
             overflow: hidden;
+            max-height: 845px;
             
             .contenedor-gif-hover{
                 position: relative;  

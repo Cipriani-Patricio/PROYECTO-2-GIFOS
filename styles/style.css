@@ -323,13 +323,13 @@ header .menu .creargifo {
   height: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 18.1% 18.1%;
-      grid-template-columns: 18.1% 18.1%;
+  -ms-grid-columns: 156px 156px;
+      grid-template-columns: 156px 156px;
   -webkit-column-gap: 2%;
           column-gap: 2%;
   row-gap: 25px;
-  max-height: 845px;
   overflow: hidden;
+  max-height: 845px;
 }
 
 .principal .cont-busqueda .contenedor-gif-hover {
@@ -1331,7 +1331,7 @@ footer .derechos {
     -webkit-column-gap: 28px;
             column-gap: 28px;
     row-gap: 28px;
-    max-height: 684;
+    max-height: 684px;
     overflow: hidden;
   }
   .principal .cont-busqueda .contenedor-gif-hover {
