@@ -281,27 +281,39 @@ header .menu .creargifo {
   margin-right: 10px;
 }
 
-.principal .trending {
-  margin-top: 31px;
-  margin-bottom: 45px;
+.principal .trendingtitulo {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   color: #572EE5;
   text-align: center;
   line-height: 25px;
+  margin-top: 50px;
 }
 
-.principal .trending span {
+.principal .trending1 {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.principal .trending1 .trending12 {
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
   font-size: 16px;
   color: #572EE5;
   text-align: center;
   line-height: 25px;
-}
-
-.principal .trending2 {
-  display: none;
+  margin-left: 8px;
 }
 
 .principal .divtitulo {
@@ -1248,27 +1260,6 @@ footer .derechos {
   .principal img {
     width: 399px;
     height: 190px;
-  }
-  .principal .trending {
-    display: none;
-  }
-  .principal .trending2 {
-    display: block;
-    margin-top: 73px;
-    margin-bottom: 95px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    color: #572EE5;
-    text-align: center;
-    line-height: 25px;
-  }
-  .principal .trending2 span {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    color: #572EE5;
-    text-align: center;
-    line-height: 25px;
   }
   .principal .divinput {
     width: 551px;

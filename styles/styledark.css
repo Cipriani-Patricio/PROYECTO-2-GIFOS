@@ -172,6 +172,41 @@ header .menu .creargifo {
   margin-top: 102px;
 }
 
+.principal .trendingtitulo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 25px;
+  margin-top: 50px;
+}
+
+.principal .trending1 {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.principal .trending1 .trending12 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 25px;
+  margin-left: 8px;
+}
+
 .principal .inspirate {
   margin-bottom: 31px;
   font-family: "Montserrat", sans-serif;

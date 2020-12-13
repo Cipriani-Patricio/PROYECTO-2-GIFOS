@@ -118,6 +118,11 @@ async function mostrarBusqueda(inputValue) {
   iconsfavsearch=[];
   iconsfavactivesearch=[];
   imagengifsearch=[];
+ var trending1= document.getElementById('trending1');
+ var trendingtitulo=document.getElementById('trendingtitulo');
+ trendingtitulo.style.display= 'none';
+
+ trending1.style.display= 'none';
 
 
            contBusqueda.innerHTML= "";
@@ -440,11 +445,11 @@ function keepcolor( id , letrafor ){
 function iconsMax(url){
   
     for(let x=0; x<iconsmaxsearch.length; x++){
-  console.log(url)
+  
 
     iconsmaxsearch[x].addEventListener('click',()=>{
     
-    console.log(url);
+    
     var thememax= document.getElementById('thememax');
     thememax.href= 'styles/stylemax.css';
     var contenedormaxgaleria= document.getElementById('galeriamax');
@@ -577,3 +582,40 @@ function quitar(fav){
 
 // MAXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------
     
+
+
+// trendings
+function trending() {
+
+
+  let url = `https://api.giphy.com/v1/trending/searches?api_key=${apiKey}`;
+
+
+ var trending1= document.getElementById('trending1');
+
+  return fetch(url)
+    .then((resp) => resp.json())
+    .then((palabrasclave) => {
+
+      let topics = palabrasclave.data;
+      trending1.innerHTML = `<p class="trending12">${topics[0]}</p>, <p class="trending12">${topics[1]}</p>, 
+                            <p class="trending12">${topics[2]}</p>, <p class="trending12">${topics[3]}</p>, 
+                            <p class="trending12">${topics[4]}</p>`;
+
+      let presionoentopic = document.getElementsByClassName("trending12");
+      
+      for (let i = 0; i < presionoentopic.length; i++) {
+        presionoentopic[i].addEventListener("click", function (e) {
+          input.value = topics[i];
+          mostrarBusqueda( input.value)
+          var sacartitulo= document.getElementById('inspirate2');
+          sacartitulo.style.display= 'none';
+        });
+      }
+    })
+    .catch((err) => {
+                         console.log(err);
+                     });
+}
+
+trending();

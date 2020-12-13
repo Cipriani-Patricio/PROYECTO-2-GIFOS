@@ -11,8 +11,7 @@ burger.addEventListener('click', () => {
     x.style.display='block';
     desplegable.style.display='block';
     let sacarlupa= document.getElementById('lupa');
-    if(sacarlupa != null){
-    sacarlupa.style.display= 'none';}
+    
 } );
 
 x.addEventListener('click', () => {
@@ -20,8 +19,7 @@ x.addEventListener('click', () => {
     x.style.display='none';
     desplegable.style.display='none';
     let sacarlupa= document.getElementById('lupa');
-    if(sacarlupa != null){
-        sacarlupa.style.display= 'block';}
+    
     
 } );
 

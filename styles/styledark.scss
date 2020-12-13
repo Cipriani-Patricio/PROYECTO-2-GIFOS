@@ -156,6 +156,37 @@ body{
      align-items: center;
      margin-top: 102px;
 
+
+     .trendingtitulo{
+        font-family: $letra-principal;
+        font-size: 18px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 25px;
+        margin-top: 50px;
+    }
+   
+     .trending1 {
+        width: auto;
+        height: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+cursor: pointer;
+
+        .trending12{
+            font-family: $letra-principal;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 25px;
+            margin-left: 8px;
+         }
+       
+    
+
+     }
      
      .inspirate{
          margin-bottom:31px;
